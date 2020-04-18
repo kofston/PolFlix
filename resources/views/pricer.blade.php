@@ -1,1 +1,1 @@
-<?php
+<pricer-component></pricer-component>

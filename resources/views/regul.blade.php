@@ -1,0 +1,1 @@
+<regul-component></regul-component>

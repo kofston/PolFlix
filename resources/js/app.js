@@ -37,7 +37,10 @@ Vue.component('slider-component', require('./components/Slider.vue').default);
 Vue.component('find-owl-component', require('./components/FindAndOwl.vue').default);
 Vue.component('footer-component', require('./components/Footer.vue').default);
 Vue.component('category-component', require('./components/Category.vue').default);
-
+Vue.component('product-component', require('./components/Product.vue').default);
+Vue.component('pricer-component', require('./components/Pricer.vue').default);
+Vue.component('regul-component', require('./components/Regul.vue').default);
+Vue.component('register-component', require('./components/Regul.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -58,10 +61,27 @@ const app = new Vue({
                 itemSelector: '.grid-item',
                 fitWidth: true
             });
+        },
+        initFancy:function () {
+            $( document ).ready(function() {
+                // $( ".fa-user" ).click(function() {
+                //     $.fancybox.open('<div class="login_box"><h2 class="netflix_font">ZAPRASZAMY PO ODBIÓR</h2><p>Film będzie zarezerwowany dla Ciebie w naszym biurze przy ulicy : Hetmańskiej 42<br>Czas na odbiór filmu to 24 godziny<br>Pamiętaj!<br>Zabierz ze sobą dokument tożsamości!</p></div>');
+                // });
+                // $.fancybox.open({
+                //     src  : 'link-to-your-page.html',
+                //     type : 'iframe',
+                //     opts : {
+                //         afterShow : function( instance, current ) {
+                //             console.info( 'done!' );
+                //         }
+                //     }
+                // });
+            });
         }
     },
     mounted()
     {
+        this.initFancy(),
         this.initMasonry(),
       this.simpleParallaxInit()
     }

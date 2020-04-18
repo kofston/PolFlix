@@ -58,7 +58,7 @@
                 <div class="owl_carousel_box">
                     <div class="owl-carousel pt100">
                         <div class="category_box">
-                            <a href="/">
+                            <a href="/category?cat=1">
 
                                 <div class="category_box_header">
                                     <span>AKCJI</span>
@@ -73,7 +73,7 @@
                         </div>
 
                         <div class="category_box">
-                            <a href="/">
+                            <a href="/category?cat=2">
                                 <div class="category_box_header">
                                     <span>KOMEDIE</span>
                                 </div>
@@ -86,7 +86,7 @@
                         </div>
 
                         <div class="category_box">
-                            <a href="/">
+                            <a href="/category?cat=3">
                                 <div class="category_box_header">
                                     <span>PRZYGODOWE</span>
                                 </div>

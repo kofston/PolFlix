@@ -17,3 +17,11 @@ Route::get('/', function () {
     return view('header').view('homepage').view('footer');
 });
 Route::get('/category', 'CategoryController@show_video');
+Route::get('/product', 'ProductController@show_product');
+Route::get('/pricer', 'PriceController@index');
+Route::get('/regul', 'RegulController@index');
+Route::get('/login/register', 'LoginController@register');
+Route::post('/login/signin', 'LoginController@signin');
+Route::post('/login/signup', 'LoginController@signup');
+Route::post('/login/sessionlog', 'LoginController@sessionlog');
+Route::get('/login/unlog', 'LoginController@unlog');
