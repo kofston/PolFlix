@@ -1,8 +1,10 @@
 <?php
-session_start();
-echo '<pre>';
-var_dump($_SESSION);
-echo '</pre>';
+if(!session_id()) {
+    session_start();
+}
+//echo '<pre>';
+//var_dump($_SESSION);
+//echo '</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -25,4 +27,4 @@ echo '</pre>';
 </head>
 <body>
 <div id="app">
-        <header-component logid="{{((isset($_SESSION['Login_id']))?$_SESSION['Login_id']:0)}}" islog="{{((isset($_SESSION['Login']))?$_SESSION['Login']:'Zaloguj się!')}}"></header-component>
+        <header-component isadmin="{{((isset($_SESSION['isAdmin']))?$_SESSION['isAdmin']:0)}}" logid="{{((isset($_SESSION['Login_id']))?$_SESSION['Login_id']:0)}}" islog="{{((isset($_SESSION['Login']))?$_SESSION['Login']:'Zaloguj się!')}}"></header-component>

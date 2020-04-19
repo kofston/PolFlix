@@ -63,7 +63,7 @@ class Product extends Model
             <div class="date_box">
                 <div class="row m-0">
                     <div class="col-lg-4 col-m-12 p-0" style="min-height: 100px;">
-                    <form action="/rent" id="rent_form">
+                    <form action="/rent" METHOD="get" id="rent_form">
                     '.(($amount>0)? '  <button type="submit" class="add_button" data-ident="1">REZERWUJ</input>' : 'BRAK NA STANIE').'
                     </div>
                     <div class="col-lg-4 col-m-12 text-center p_amounts" style="min-height: 100px;">
@@ -78,7 +78,7 @@ class Product extends Model
                             <option value="4">4 Dni</option>
                             <option value="5">5 Dni</option>
                         </select>
-<input type="hidden" name="movie_id" value="' . $actual_prod . '">
+<input type="hidden" name="movie_id" value="' . $actual_prod . '" form="rent_form">
                          </form>
                     </div>
 

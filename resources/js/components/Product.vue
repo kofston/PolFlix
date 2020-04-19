@@ -12,6 +12,10 @@
             prodinfo:{
                 type:String,
                 required:true
+            },
+            islogin:{
+                type:String,
+                required:true
             }
         },
         methods:
@@ -22,7 +26,15 @@
             },
         mounted()
         {
-            this.putProductInfo()
+            this.putProductInfo(),
+            $(".select_days").change(function () {
+                if(this.islogin != 0)
+                {
+                    $(".option_default").attr('disabled', true);
+                    $(".add_button").css("pointer-events","auto");
+                    $(".add_button").css("background-color","red");
+                }
+            });
         }
     }
 </script>

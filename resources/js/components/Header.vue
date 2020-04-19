@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-
+<!--login box-->
             <div style="display: none;" id="login">
                 <h2 class="text-center">Zaloguj się</h2>
                 <div method="POST" action="/login/signup">
@@ -65,9 +65,38 @@
                     <button id="login-button" class="text-white login-button">Zaloguj się</button>
                 </div>
             </div>
-
-
-
+<!--register box-->
+            <div class="register_box" id="register" style="display: none;">
+                <div class="register_boxing text-center">
+                    <h2 class="text-white">Dołącz do społeczności Polflix!<br>Ciesz się najlepszymi filmami!</h2><br>
+                    <img :src="logo" style="margin-bottom: 25px;">
+                    <div method="POST" action="">
+                        <div class="form-group text-center">
+                            <input type="text" class="form-control input_login_r" name="name_r" placeholder=" Imię">
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="text" class="form-control input_login_r" name="lastname_r" placeholder=" Nazwisko">
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="text" class="form-control input_login_r" name="login_r" placeholder=" Login">
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="password" class="form-control input_login_r" name="password_r" placeholder=" Hasło">
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="email" class="form-control input_login_r" name="email_r" placeholder=" E-mail">
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="checkbox" id="regu_cb" style="margin-right: 15px;" name="regu"><label for="reg" class="label_ckb">Akceptuje postanowienia regulaminu<br>i wyrażam zgodę na<br>przetwarzanie moich danych osobowych.</label>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="checkbox" id="pegi_cb" style="margin-right: 15px;" name="pegi"><label for="pegi" class="label_ckb">Oświadczam iż jestem osobą pełnoletnią</label>
+                        </div>
+                        <button type="submit" id="reg_but" class="text-white login-button register_disa">Zarejestruj się</button>
+                    </div>
+                </div>
+            </div>
+<!---->
         </div>
 
         <div class="menu_box">
@@ -136,7 +165,11 @@
                 required: true
             },
             logid:{
-                type: Number,
+                type: String,
+                required: true
+            },
+            isadmin:{
+                type: String,
                 required: true
             }
         },
@@ -170,7 +203,7 @@
                             if(response==1) {
                                 $.fancybox.close();
                                 $.fancybox.open('<h2>Zostałeś zalogowany! za chwilę nastąpi przekierowanie...</h2>');
-                                document.location.href="/";
+                                setTimeout(function(){ document.location.href="/"; }, 2000);
                             }
                             else {
                                 login = "Zaloguj się!";
@@ -185,11 +218,67 @@
                         }
                     });
                 });
+
+
+                $('input[type=checkbox]').change(function () {
+                    if(($("#regu_cb").is(':checked'))&&($("#pegi_cb").is(':checked')))
+                    {
+                        $('#reg_but').removeClass('register_disa');
+                        $("#reg_but").removeAttr('disabled');
+                        $('#reg_but').attr('enabled','enabled');
+                    }
+                    else
+                    {
+                        $('#reg_but').addClass('register_disa');
+                        $("#reg_but").removeAttr('enabled');
+                        $('#reg_but').attr('disabled','true');
+                    }
+                });
+
+                $("#reg_but").click(function() {
+
+                    var name_r = $("input[name='name_r']").val();
+                    var lastname_r = $("input[name='lastname_r']").val();
+                    var login_r = $("input[name='login_r']").val();
+                    var password_r = $("input[name='password_r']").val();
+                    var email_r = $("input[name='email_r']").val();
+
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url : '/login/signin',
+                        data : { name_r:name_r,lastname_r:lastname_r,password_r:password_r,login_r:login_r,password_r:password_r,email_r:email_r},
+                        type : 'POST',
+
+                        success : function(response) {
+                            if(response==1) {
+                                $.fancybox.close();
+                                $.fancybox.open('<h2>Zostałeś zarejestrowany! za chwilę nastąpi przekierowanie... po czym będziesz mógł się zalogować</h2>');
+                                setTimeout(function(){ document.location.href="/"; }, 2000);
+                            }
+                            else {
+                                login = "Zaloguj się!";
+                                $.fancybox.close();
+                                $.fancybox.open('<h2>Wystąpił błąd! Skontaktuj się z Administratorem!</h2>');
+                            }
+                        },
+                        error : function(xhr, status) {
+                            alert('Błędnie wypełnione pola!');
+                        },
+                        complete : function(xhr, status) {
+                        }
+                    });
+                });
             },
             setLogin:function () {
                if(this.$props.islog != 'Zaloguj się!')
                {
-                   loginBox = '<a id="clientPanel" href="/profile">'+this.$props.islog+'</a><i class="fas fa-sign-out-alt logout"></i>';
+                   if(this.$props.isadmin == 1)
+                   loginBox = '<a id="clientPanel" href="/admin/panel">'+this.$props.islog+'</a><i class="fas fa-sign-out-alt logout"></i>';
+                   else
+                       loginBox = '<a id="clientPanel" href="/profile">'+this.$props.islog+'</a><i class="fas fa-sign-out-alt logout"></i>';
+
                    $( ".shop_box" ).css("display","none");
                }
             },

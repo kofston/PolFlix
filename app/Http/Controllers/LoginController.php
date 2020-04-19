@@ -23,9 +23,9 @@ class LoginController extends Controller
         $put_user = new Login;
         $put_user = $put_user->insert_new_user($name,$lastname,$login,$pass,$mail);
         if($put_user)
-        {
-            return view('header').view('register').view('footer');
-        }
+            return $is_register = 1;
+        else
+            return $is_register = 0;
 
     }
     public function signup()
