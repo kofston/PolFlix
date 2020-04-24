@@ -18,16 +18,16 @@
                                 <div class="col-lg-4 col-md-12 p-0 search_type search_type_max_wd450">
                                     <span>Kategoria:</span><br>
                                     <select class="form_control select_mainpage select2" id="select_cat">
-                                        <option>Akcji</option>
-                                        <option>Komedie</option>
-                                        <option>Przygodowe</option>
+                                        <option value="1">Akcji</option>
+                                        <option value="2">Komedie</option>
+                                        <option value="3">Przygodowe</option>
                                     </select>
                                 </div>
 
                                 <div class="col-lg-4 col-md-12 p-0 search_type">
                                     <span>Film:</span><br>
                                     <select class="form_control select_mainpage select2" id="select_mov" >
-                                        <option>Jakiś film</option>
+                                        <optgroup id="movies_ajax" label="Filmy z danej kategorii:"></optgroup>
                                     </select>
 
                                 </div>
@@ -106,14 +106,55 @@
 </template>
 
 <script>
+    var ajaxmovie='';
     export default {
         methods: {
             postFindMovie: function() {
                 $( document ).ready(function() {
+                    var categoryid = $("#select_cat").val();
+
+                    $.ajax({
+                        url: '/product/findVideo',
+                        data:  {
+                            category_id:categoryid
+                        },
+                        type: 'GET',
+                        success: function success(response) {
+                            // console.log(response);
+                            ajaxmovie = response;
+                            console.log(ajaxmovie);
+                            $('#movies_ajax').html(ajaxmovie);
+                        },
+                        error: function error(xhr, status) {
+                            alert('Błęd!');
+                        },
+                        complete: function complete(xhr, status) {}
+                    });
+
                     $( "#select_cat" ).change(function() {
-                        $( "#select_mov" ).css("opacity","1");
+                    var categoryid = $(this).val();
+
+                        $.ajax({
+                            url: '/product/findVideo',
+                            data:  {
+                                category_id:categoryid
+                            },
+                            type: 'GET',
+                            success: function success(response) {
+                                // console.log(response);
+                                ajaxmovie = response;
+                                console.log(ajaxmovie);
+                                $('#movies_ajax').html(ajaxmovie);
+                            },
+                            error: function error(xhr, status) {
+                                alert('Błęd!');
+                            },
+                            complete: function complete(xhr, status) {}
+                        });
+
                     });
                 });
+
             },
           initOwlCarousel: function() {
               $(document).ready(function () {
@@ -155,6 +196,10 @@ this.initOwlCarousel();
         },
         mounted() {
             console.log('Component mounted.');
+            $( ".search_button" ).click(function() {
+                var search_movie = $("#select_mov").val();
+                    window.location.href = '/product/?prod='+search_movie;
+            });
         }
     }
 </script>

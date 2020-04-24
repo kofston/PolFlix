@@ -6,6 +6,7 @@
 </template>
 
 <script>
+    var islog = 0;
     export default {
         name: "Product",
         props:{
@@ -22,19 +23,25 @@
             {
                 putProductInfo:function(){
                     $(".product_box_bg").append(this.prodinfo);
+                },
+                isLogin:function(){
+                    islog = this.islogin;
                 }
             },
         mounted()
         {
+            this.isLogin(),
             this.putProductInfo(),
             $(".select_days").change(function () {
-                if(this.islogin != 0)
+                if(islog != 0)
                 {
+                 console.log(islog);
                     $(".option_default").attr('disabled', true);
                     $(".add_button").css("pointer-events","auto");
                     $(".add_button").css("background-color","red");
                 }
             });
+
         }
     }
 </script>

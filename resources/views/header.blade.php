@@ -27,4 +27,4 @@ if(!session_id()) {
 </head>
 <body>
 <div id="app">
-        <header-component isadmin="{{((isset($_SESSION['isAdmin']))?$_SESSION['isAdmin']:0)}}" logid="{{((isset($_SESSION['Login_id']))?$_SESSION['Login_id']:0)}}" islog="{{((isset($_SESSION['Login']))?$_SESSION['Login']:'Zaloguj się!')}}"></header-component>
+        <header-component rent="{{((isset($rent)?$rent:''))}}" isadmin="{{((isset($_SESSION['isAdmin']))?$_SESSION['isAdmin']:0)}}" logid="{{((isset($_SESSION['Login_id']))?$_SESSION['Login_id']:0)}}" islog="{{((isset($_SESSION['Login']))?$_SESSION['Login']:'Zaloguj się!')}}"></header-component>

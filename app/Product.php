@@ -91,4 +91,16 @@ class Product extends Model
 
         return $movie_list;
     }
+    public function FindMovie($cat = NULL)
+    {
+        $movie_query = DB::select("SELECT * from movies WHERE m_category=$cat  AND status=1");
+        $titles = '';
+        foreach ($movie_query as $mq)
+        {
+
+            $titles .='<option value="'.$mq->m_id.'">'.$mq->m_title.'</option>';
+        }
+
+        return $titles;
+    }
 }

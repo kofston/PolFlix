@@ -150,6 +150,7 @@
 </template>
 
 <script>
+    var rent='';
     var login = '';
     var loginBox ='';
     export default {
@@ -171,6 +172,10 @@
             isadmin:{
                 type: String,
                 required: true
+            },
+            rent: {
+                type: String,
+                required: true
             }
         },
         methods: {
@@ -184,6 +189,22 @@
             },
             mouseleave: function(){
                 this.message = ''
+            },
+            isRent: function () {
+                rent = this.rent;
+            },
+            checkRent:function () {
+                if(rent !='')
+                {
+                    setTimeout(function(){
+                    console.log("mam renta"+rent);
+                    if(rent == 0)
+                        $.fancybox.open('<div class="message"><h2 class="netflix_font">Wygląda na to że posiadasz ten film w swojej bibliotece.</h2>Po oglądnięciu go prosimy o terminowy zwrot.<br>POZDRAWIAMY! GRUPA POL-FLIX<br></p><img src="https://i.ya-webdesign.com/images/watching-tv-png-1.png"></div>');
+                    else
+                        $.fancybox.open('<div class="message"><h2 class="netflix_font">ZAPRASZAMY PO ODBIÓR</h2><p>Film będzie zarezerwowany dla Ciebie w naszym biurze przy ulicy : Hetmańskiej 42<br>Czas na odbiór filmu to 24 godziny<br>Pamiętaj!<br>Zabierz ze sobą dokument tożsamości!</p><img src="https://www.pngkit.com/png/full/0-152_family-tv-internet-and-tv-provider-family.png"></div>');
+                    }, 100);
+
+                }
             },
             loginAJAX:function () {
                 $("#login-button").click(function() {
@@ -297,6 +318,8 @@
         mounted() {
             console.log('Component mounted.'),
             this.loginAJAX(),
+                this.isRent(),
+                this.checkRent(),
                 this.setLogin(),
                 login = this.$props.islog,
                 $(".infoMouseOverLoginIcon").append(loginBox);

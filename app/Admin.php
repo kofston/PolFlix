@@ -143,6 +143,7 @@ class Admin extends Model
 
             foreach ($get_info_about_movie as $get_info)
             {
+                $id = $get_info->m_id;
                 $title = $get_info->m_title;
                 $descripion = $get_info->m_description;
                 $price = $get_info->m_price;
@@ -155,6 +156,7 @@ class Admin extends Model
                 $trailer = $get_info->m_trailer;
 
                 $movie_data = array(
+                    'id'=>$id,
                     'title'=>$title,
                     'description'=>$descripion,
                     'price'=>$price,

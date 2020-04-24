@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345aa378-a091-4c90-89a3-9cea4c7ba019" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SliderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Slider.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/4k_logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/4koloronarozniki.JPG" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/4ktombraider.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about_us_bcg.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/add_movie_bcg.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/akcji1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/akcji1_video.jpg" afterDir="false" />
@@ -17,35 +16,41 @@
       <change afterPath="$PROJECT_DIR$/public/images/akcji3_video.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/akcji4_video.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/avengers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/awamat.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/br_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/clipper.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dukah.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/dvd_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dyn1.JPG" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/loading.gif" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/polflix-logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/register_bcg.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/spider-man-3-hacerse-cargo-de-i6679.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/texture.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/turecka_kebab_doner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/AddMovie.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Admin.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Profile.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/add_movie.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/AboutUs.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/aboutus.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public" beforeDir="false" afterPath="$PROJECT_DIR$/public" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AddMovie.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AddMovie.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/FindAndOwl.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FindAndOwl.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Pricer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Pricer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Slider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Slider.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/add_movie.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/add_movie.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +73,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -183,7 +188,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kasety" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/romexsport_na_serwer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -214,6 +219,12 @@
       <workItem from="1586765186541" duration="12785000" />
       <workItem from="1587198010907" duration="21225000" />
       <workItem from="1587276189579" duration="25222000" />
+      <workItem from="1587363448742" duration="1271000" />
+      <workItem from="1587540133879" duration="2889000" />
+      <workItem from="1587576784572" duration="6621000" />
+      <workItem from="1587621177365" duration="874000" />
+      <workItem from="1587661540913" duration="5757000" />
+      <workItem from="1587707971524" duration="8193000" />
     </task>
     <servers />
   </component>
@@ -224,26 +235,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2660" y="335" key="FileChooserDialogImpl" timestamp="1587276302823">
+    <state x="2660" y="335" key="FileChooserDialogImpl" timestamp="1587708058313">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="2660" y="335" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587276302823" />
+    <state x="2660" y="335" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587708058313" />
     <state x="2674" y="394" key="NewPhpClassDialog" timestamp="1587288594698">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2674" y="394" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587288594698" />
-    <state x="2714" y="503" key="NewPhpFileDialog" timestamp="1587301063872">
+    <state x="2714" y="503" key="NewPhpFileDialog" timestamp="1587540290067">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="2714" y="503" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587301063872" />
+    <state x="2714" y="503" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587540290067" />
     <state x="2689" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587204589699">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2689" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587204589699" />
-    <state x="2516" y="462" width="607" height="598" key="find.popup" timestamp="1587308631706">
+    <state x="2516" y="462" width="607" height="598" key="find.popup" timestamp="1587741754023">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="2516" y="462" width="607" height="598" key="find.popup/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587308631706" />
+    <state x="2516" y="462" width="607" height="598" key="find.popup/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1587741754023" />
     <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586073762283" />
     <state x="2543" y="366" width="672" height="757" key="search.everywhere.popup" timestamp="1587307179218">
       <screen x="1920" y="0" width="1920" height="1160" />

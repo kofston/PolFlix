@@ -13,11 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('header').view('homepage').view('footer');
-});
+Route::get('/', 'SliderController@index');
 Route::get('/category', 'CategoryController@show_video');
 Route::get('/product', 'ProductController@show_product');
+Route::get('/product/findVideo', 'ProductController@findVideo');
 Route::get('/pricer', 'PriceController@index');
 Route::get('/regul', 'RegulController@index');
 Route::get('/login/register', 'LoginController@register');
@@ -35,3 +34,6 @@ Route::get('/admin/add_movie/{movie_id}', 'AdminController@add_movie');
 Route::post('/admin/add_movie_form', 'AdminController@add_movie_form');
 Route::get('/admin/return/{client_id}/{movie_id}', 'AdminController@returnmovie');
 Route::post('/login/forgot_pass', 'LoginController@forgot_pass');
+Route::get('/about_us', function () {
+    return view('header').view('aboutus').view('footer');
+});

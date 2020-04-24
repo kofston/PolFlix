@@ -44,6 +44,7 @@ Vue.component('register-component', require('./components/Regul.vue').default);
 Vue.component('profile-component', require('./components/Profile.vue').default);
 Vue.component('admin-component', require('./components/Admin.vue').default);
 Vue.component('addmovie-component', require('./components/AddMovie.vue').default);
+Vue.component('aboutus-component', require('./components/AboutUs.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

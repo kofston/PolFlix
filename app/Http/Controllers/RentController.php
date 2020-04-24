@@ -24,13 +24,13 @@ class RentController extends Controller
         {
             $movie_list = DB::table('movies')->get();
             $rent = 1;
-            return view('header').view('homepage',['movie_list'=>$movie_list]).view('footer',['rent'=>$rent]);
+            return view('header',['rent'=>$rent]).view('homepage',['movie_list'=>$movie_list]).view('footer');
         }
         else
         {
             $movie_list = DB::table('movies')->get();
             $rent = 0;
-            return view('header').view('homepage',['movie_list'=>$movie_list]).view('footer',['rent'=>$rent]);
+            return view('header',['rent'=>$rent]).view('homepage',['movie_list'=>$movie_list]).view('footer');
         }
     }
 }
