@@ -37,3 +37,4 @@ Route::post('/login/forgot_pass', 'LoginController@forgot_pass');
 Route::get('/about_us', function () {
     return view('header').view('aboutus').view('footer');
 });
+Route::get('/login/tester', 'LoginController@tester');

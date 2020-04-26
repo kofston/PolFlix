@@ -24,7 +24,6 @@ class AdminController extends Controller
             'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
-        echo 'fdsfds';
     }
     public function delete_movie($movie_id=NULL)
     {

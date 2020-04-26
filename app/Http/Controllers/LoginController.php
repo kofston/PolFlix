@@ -12,6 +12,10 @@ class LoginController extends Controller
     {
         return view('header').view('register').view('footer');
     }
+    public function tester()
+    {
+        return 5;
+    }
     public function signin()
     {
         $name = Request::input('name_r');
