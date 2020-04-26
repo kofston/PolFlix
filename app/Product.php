@@ -55,6 +55,8 @@ class Product extends Model
             </div>
             <div class="picture_box">
             <div class="pegi_vid"><span>' . $movie_query[0]->m_pegi . '</span></div>
+                            <div class="price_vid"><span>' . $movie_query[0]->m_price . ' zł/dzień</span></div>
+                             <a href="/product/like/'.$movie_query[0]->m_id.'"><div class="like_vid"><span>' . $movie_query[0]->m_like . '</span></div></a>
                 <img src="' . $img . '" width="100%">
             </div>
             <div class="description_box">

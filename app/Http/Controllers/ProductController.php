@@ -25,7 +25,21 @@ class ProductController extends Controller
         $finder = new Product;
         $titles = $finder->FindMovie($categoryID);
         return $titles;
+    }
+    public function like($movie_id = NULL)
+    {
+        $show_like = DB::table('movies')->where('m_id', $movie_id)->get();
+        $like = $show_like[0]->m_like;
+        $like=$like+1;
+        if(!session_id()) {
+            session_start();
+        }
+        if(isset($_SESSION['Login_id']))
+        $put_like = DB::table('movies')->where('m_id', $movie_id)->update(['m_like' => $like]);
 
+        $m_Product = new Product;
+        $newURL ='/product/?prod='.$show_like[0]->m_id;
+        return redirect()->action('ProductController@show_product',['prod'=>$show_like[0]->m_id]);
     }
 
 }

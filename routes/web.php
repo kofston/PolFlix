@@ -19,6 +19,7 @@ Route::get('/product', 'ProductController@show_product');
 Route::get('/product/findVideo', 'ProductController@findVideo');
 Route::get('/pricer', 'PriceController@index');
 Route::get('/regul', 'RegulController@index');
+Route::get('/product/like/{movie_id}', 'ProductController@like');
 Route::get('/login/register', 'LoginController@register');
 Route::post('/login/signin', 'LoginController@signin');
 Route::post('/login/signup', 'LoginController@signup');
